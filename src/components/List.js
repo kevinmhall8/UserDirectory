@@ -1,8 +1,10 @@
 import React from 'react'
 import CardData from './CardData'
+import '../index.css';
 
 function List() {
-    return (<div className="columns is-centered"><column className=""><CardData /></column></div>)
+    return (<div><div className="cardDisplay">
+    <CardData /></div></div>)
 }
 
 

@@ -16,9 +16,9 @@ import List from './components/List'
 // getUsers() {
 //   axios.get("https://randomuser.me/api/?results=50&nat=us")
 //     .then(res => {
-//       const employees = res.data;
-//       this.setState({ employees: res.data.results });
-//       console.log(this.state.employees.length)
+//       const users = res.data;
+//       this.setState({ users: res.data.results });
+//       console.log(this.state.users.length)
 //     }).catch(err => console.log(err));
 
 // }
