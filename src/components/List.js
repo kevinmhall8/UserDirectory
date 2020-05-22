@@ -1,10 +1,29 @@
-import React from 'react'
+import React, {Component} from 'react'
 import CardData from './CardData'
-import '../index.css';
+import API from '../utils/API'
+import '../index.css'
 
-function List() {
-    return (<div><div className="cardDisplay">
-    <CardData /></div></div>)
+class List extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            users : []
+    
+        }
+
+    }
+    componentDidMount(){
+    API.getUsers().then(data => {
+        console.log(data)
+        this.setState({users: data.data.results})
+    })
+    }
+    render() 
+    {
+        return (<div><div className="cardDisplay">
+        <CardData users={this.state.users}/></div></div>)
+
+    }
 }
 
 

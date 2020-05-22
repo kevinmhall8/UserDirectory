@@ -21,3 +21,7 @@ code {
 .cardDisplay {
   display: flex;
 }
+
+.navbar-brand {
+  text-align: center;
+}
