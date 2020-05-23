@@ -20,8 +20,9 @@ class List extends Component {
     }
     render() 
     {
-        return (<div><div className="cardDisplay">
-        <CardData users={this.state.users}/></div></div>)
+        return (<div className="list">
+        <CardData users={this.state.users}/>
+        </div>)
 
     }
 }

@@ -3,11 +3,17 @@ import '../index.css';
 
 function Header () {
     return(
-<nav className="navbar is-primary" role="navigation" aria-label="main navigation">
-  <div className="navbar-brand is-size-2">
-    <p className="navtitle">Welcome to the User Directory</p>
-  </div>
-</nav>)
+<section className="hero is-primary">
+  <div className="hero-body">
+    <div className="container">
+      <h1 className="title">
+        Welcome to the User Directory!
+      </h1>
+      </div>
+      </div>
+      </section>
+
+)
 }
 
 export default Header

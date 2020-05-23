@@ -1,42 +1,45 @@
 import React from "react"
+import '../index.css'
 
-function CardData(props) {
-  return (<div>
+function CardData(props) 
+
+{
+  return (
+    <div className="cardDisplay is-mobile">
+    <table className="table">
+        <thead>
+        <tr>
+        <th>Photo</th>
+        <th>
+        <button>
+        <i className="fas fa-sort-alpha-down"></i>
+        </button>
+        Name
+        </th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Age</th>
+        </tr>
+        </thead>
+        <tbody className="tableBod">
     {props.users.map(user => {
       return (
-        
-
-        <tbody>
           <tr>
             <th>
             <img src={user.picture.medium} alt="N/A"/>
             </th>
             <td>
-              {user.name.first}
+              {user.name.first} {user.name.last}
             </td>
             <td>{user.phone}</td>
             <td>{user.email}</td>
             <td>{user.dob.age}</td>
           </tr>
-        </tbody>
-
-
-
-        // <div className="card">
-        //   <div className="card-image">
-        //     <figure className="image is-4by5">
-        //       <img src={user.picture.medium} alt="N/A" />
-        //     </figure>
-        //   </div>
-        //   <hr />
-        //   <p className="title is-4 is-centered">{user.name.first}</p><hr />
-        //   <p className="subtitle is-4 is-centered">{user.email}</p> <hr />
-        //   <p className="subtitle is-4 is-centered">{user.dob.age}</p>
-        //   <br /> <br />
-        // </div>
-
       );
     })}
+    </tbody>
+
+</table>
   </div>
   )
 }
